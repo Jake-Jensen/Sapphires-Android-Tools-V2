@@ -1,0 +1,12 @@
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\obj\Debug\Sapphire_s_Android_Tools_V2.Form1.resources
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\obj\Debug\Sapphire_s_Android_Tools_V2.Resources.resources
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\obj\Debug\Sapphire's Android Tools V2.vbproj.GenerateResource.Cache
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\bin\Debug\Sapphires Android Tools V2.exe.config
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\bin\Debug\Sapphires Android Tools V2.exe
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\bin\Debug\Sapphires Android Tools V2.pdb
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\bin\Debug\Sapphires Android Tools V2.xml
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\obj\Debug\Sapphires Android Tools V2.exe
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\obj\Debug\Sapphires Android Tools V2.xml
+c:\users\synapse\documents\visual studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\obj\Debug\Sapphires Android Tools V2.pdb
+C:\Users\Synapse\Documents\Visual Studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\bin\Debug\Sapphires Android Tools V2.exe.CodeAnalysisLog.xml
+C:\Users\Synapse\Documents\Visual Studio 2015\Projects\Sapphire's Android Tools V2\Sapphire's Android Tools V2\bin\Debug\Sapphires Android Tools V2.exe.lastcodeanalysissucceeded

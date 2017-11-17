@@ -1,0 +1,31 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Sapphires Android Tools V2
+</name>
+</assembly>
+<members>
+<member name="T:Sapphire_s_Android_Tools_V2.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Sapphire_s_Android_Tools_V2.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Sapphire_s_Android_Tools_V2.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Sapphire_s_Android_Tools_V2.My.Resources.Resources.overwatch___blackwatch_mercy_by_animatedanarchist_dbgb21u">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+</members>
+</doc>
