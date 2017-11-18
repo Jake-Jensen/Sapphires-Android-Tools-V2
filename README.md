@@ -11,13 +11,13 @@ While the tool is made with the Z981 in mind, the current library of exploits sh
 VIKIROOT
 
 # Future exploits
-Blueborne
-DirtyC0w
-Recowvery
-LG V20 variant DirtyC0w
-TowelRoot
-And many more.
+1. Blueborne
+2. DirtyC0w
+3. Recowvery
+4. LG V20 variant DirtyC0w
+5. TowelRoot
+6. And many more.
 
 # Future Program Goals
-Conversion to linux+GNU based operating systems
-Conversion to BSD based operating systems
+1. Conversion to linux+GNU based operating systems
+2. Conversion to BSD based operating systems
