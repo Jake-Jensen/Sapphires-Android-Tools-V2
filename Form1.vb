@@ -1,4 +1,34 @@
-﻿Public Class Form1
+﻿Imports System.IO
+Imports System.IO.Compression
+
+Module Module1
+    Sub Main()
+        Dim zipPath As String = Environment.ExpandEnvironmentVariables("%userprofile%\Downloads\Exploit.zip")
+        Dim extractPath As String = "c:\Documents and Settings\All Users\Documents\Sapphire's Android Tools"
+
+        ZipFile.ExtractToDirectory(zipPath, extractPath)
+    End Sub
+End Module
+
+Public Class Form1
+    Sub DeleteFilesFromFolder(Folder As String)
+        If Directory.Exists(Folder) Then
+            Dim ADBProcess() As Process
+            ADBProcess = Process.GetProcessesByName("adb")
+            If ADBProcess.Count < 5 Then
+                adb("/c adb kill-server")
+            End If
+            For Each _file As String In Directory.GetFiles(Folder)
+                    File.Delete(_file)
+                Next
+                For Each _folder As String In Directory.GetDirectories(Folder)
+
+                    DeleteFilesFromFolder(_folder)
+                Next
+
+            End If
+
+    End Sub
 
     Private Class GV
         Public Shared ProgStatus As Integer = 0
@@ -6,6 +36,8 @@
     End Class
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call DeleteFilesFromFolder("c:\Documents and Settings\All Users\Documents\Sapphire's Android Tools")
+        Call Main()
         ' ' Basic file verification, and changes the color of the status buttons to green if they are ready. 
         If My.Computer.FileSystem.FileExists("C:\Documents and Settings\All Users\Documents\Sapphire's Android Tools\adb.exe") Then
             If My.Computer.FileSystem.FileExists("C:\Documents and Settings\All Users\Documents\Sapphire's Android Tools\exploit") Then
@@ -106,7 +138,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        MsgBox("This will attempt to disable SELinux. Connect phone via USB now.")
+        MsgBox("This will attempt to disable SELinux. Connect phone via USB now. Works best when ran after root shell.")
         adb("/c adb shell SETENFORCE 0")
         EnforceStatusButton.BackColor = Color.Yellow
         EnforceStatusButton.ForeColor = Color.Yellow
@@ -114,5 +146,9 @@
 
     Private Sub ReadmeButton_Click(sender As Object, e As EventArgs) Handles ReadmeButton.Click
         Form2.Show()
+    End Sub
+
+    Private Sub DCV1Button_Click(sender As Object, e As EventArgs) Handles DCV1Button.Click
+
     End Sub
 End Class

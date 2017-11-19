@@ -35,6 +35,7 @@ Partial Class Form1
         Me.EnforceStatLabel = New System.Windows.Forms.Label()
         Me.EnforceStatusButton = New System.Windows.Forms.Button()
         Me.ReadmeButton = New System.Windows.Forms.Button()
+        Me.DCV1Button = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ReadyButton
@@ -181,6 +182,18 @@ Partial Class Form1
         Me.ReadmeButton.Text = "Readme"
         Me.ReadmeButton.UseVisualStyleBackColor = False
         '
+        'DCV1Button
+        '
+        Me.DCV1Button.BackColor = System.Drawing.Color.Transparent
+        Me.DCV1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DCV1Button.ForeColor = System.Drawing.Color.White
+        Me.DCV1Button.Location = New System.Drawing.Point(93, 12)
+        Me.DCV1Button.Name = "DCV1Button"
+        Me.DCV1Button.Size = New System.Drawing.Size(75, 23)
+        Me.DCV1Button.TabIndex = 12
+        Me.DCV1Button.Text = "DC V1"
+        Me.DCV1Button.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -189,6 +202,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.Sapphire_s_Android_Tools_V2.My.Resources.Resources.overwatch___blackwatch_mercy_by_animatedanarchist_dbgb21u
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(868, 499)
+        Me.Controls.Add(Me.DCV1Button)
         Me.Controls.Add(Me.ReadmeButton)
         Me.Controls.Add(Me.EnforceStatusButton)
         Me.Controls.Add(Me.EnforceStatLabel)
@@ -227,4 +241,5 @@ Partial Class Form1
     Friend WithEvents EnforceStatLabel As Label
     Friend WithEvents EnforceStatusButton As Button
     Friend WithEvents ReadmeButton As Button
+    Friend WithEvents DCV1Button As Button
 End Class
