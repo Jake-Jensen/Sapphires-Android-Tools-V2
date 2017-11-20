@@ -1,4 +1,4 @@
-﻿Imports System.IO
+Imports System.IO
 Imports System.IO.Compression
 Imports System.Timers
 
@@ -180,7 +180,7 @@ Public Class Form1
         adb("/c adb push readelf /data/local/tmp")
         adb("/c adb push libsupol.so /data/local/tmp")
         adb("/c adb shell chmod 777 /data/local/tmp/*")
-        adb("/c adb shell ./data/local/tmp/DC01.sh")
+        adb("/c adb shell ./data/local/tmp/DC01.sh run-as-dirtycow /system/bin/run-as")
         ' Unable to grep output yet. Default to yellow.
         DCV1StatusButton.BackColor = Color.Yellow
         DCV1StatusButton.ForeColor = Color.Yellow
