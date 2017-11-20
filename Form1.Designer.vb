@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.ReadyButton = New System.Windows.Forms.Button()
         Me.ReadyLabel = New System.Windows.Forms.Label()
@@ -36,6 +37,12 @@ Partial Class Form1
         Me.EnforceStatusButton = New System.Windows.Forms.Button()
         Me.ReadmeButton = New System.Windows.Forms.Button()
         Me.DCV1Button = New System.Windows.Forms.Button()
+        Me.DCV1StatusLabel = New System.Windows.Forms.Label()
+        Me.DCV1StatusButton = New System.Windows.Forms.Button()
+        Me.DonateButton = New System.Windows.Forms.Button()
+        Me.ADBServerButton = New System.Windows.Forms.Button()
+        Me.StartADBButton = New System.Windows.Forms.Button()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.SuspendLayout()
         '
         'ReadyButton
@@ -103,7 +110,7 @@ Partial Class Form1
         Me.ExploitButton.BackColor = System.Drawing.Color.Transparent
         Me.ExploitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ExploitButton.ForeColor = System.Drawing.Color.White
-        Me.ExploitButton.Location = New System.Drawing.Point(12, 41)
+        Me.ExploitButton.Location = New System.Drawing.Point(174, 12)
         Me.ExploitButton.Name = "ExploitButton"
         Me.ExploitButton.Size = New System.Drawing.Size(75, 23)
         Me.ExploitButton.TabIndex = 5
@@ -187,12 +194,76 @@ Partial Class Form1
         Me.DCV1Button.BackColor = System.Drawing.Color.Transparent
         Me.DCV1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DCV1Button.ForeColor = System.Drawing.Color.White
-        Me.DCV1Button.Location = New System.Drawing.Point(93, 12)
+        Me.DCV1Button.Location = New System.Drawing.Point(174, 41)
         Me.DCV1Button.Name = "DCV1Button"
         Me.DCV1Button.Size = New System.Drawing.Size(75, 23)
         Me.DCV1Button.TabIndex = 12
         Me.DCV1Button.Text = "DC V1"
         Me.DCV1Button.UseVisualStyleBackColor = False
+        '
+        'DCV1StatusLabel
+        '
+        Me.DCV1StatusLabel.AutoSize = True
+        Me.DCV1StatusLabel.BackColor = System.Drawing.Color.Transparent
+        Me.DCV1StatusLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DCV1StatusLabel.ForeColor = System.Drawing.Color.White
+        Me.DCV1StatusLabel.Location = New System.Drawing.Point(817, 75)
+        Me.DCV1StatusLabel.Name = "DCV1StatusLabel"
+        Me.DCV1StatusLabel.Size = New System.Drawing.Size(35, 13)
+        Me.DCV1StatusLabel.TabIndex = 13
+        Me.DCV1StatusLabel.Text = "DCV1"
+        '
+        'DCV1StatusButton
+        '
+        Me.DCV1StatusButton.BackColor = System.Drawing.Color.Red
+        Me.DCV1StatusButton.Enabled = False
+        Me.DCV1StatusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DCV1StatusButton.ForeColor = System.Drawing.Color.Black
+        Me.DCV1StatusButton.Location = New System.Drawing.Point(792, 75)
+        Me.DCV1StatusButton.Name = "DCV1StatusButton"
+        Me.DCV1StatusButton.Size = New System.Drawing.Size(19, 13)
+        Me.DCV1StatusButton.TabIndex = 14
+        Me.DCV1StatusButton.UseVisualStyleBackColor = False
+        '
+        'DonateButton
+        '
+        Me.DonateButton.BackColor = System.Drawing.Color.Transparent
+        Me.DonateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DonateButton.ForeColor = System.Drawing.Color.White
+        Me.DonateButton.Location = New System.Drawing.Point(781, 377)
+        Me.DonateButton.Name = "DonateButton"
+        Me.DonateButton.Size = New System.Drawing.Size(75, 23)
+        Me.DonateButton.TabIndex = 15
+        Me.DonateButton.Text = "Donate"
+        Me.DonateButton.UseVisualStyleBackColor = False
+        '
+        'ADBServerButton
+        '
+        Me.ADBServerButton.BackColor = System.Drawing.Color.Transparent
+        Me.ADBServerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ADBServerButton.ForeColor = System.Drawing.Color.White
+        Me.ADBServerButton.Location = New System.Drawing.Point(93, 41)
+        Me.ADBServerButton.Name = "ADBServerButton"
+        Me.ADBServerButton.Size = New System.Drawing.Size(75, 23)
+        Me.ADBServerButton.TabIndex = 16
+        Me.ADBServerButton.Text = "Kill ADB"
+        Me.ADBServerButton.UseVisualStyleBackColor = False
+        '
+        'StartADBButton
+        '
+        Me.StartADBButton.BackColor = System.Drawing.Color.Transparent
+        Me.StartADBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.StartADBButton.ForeColor = System.Drawing.Color.White
+        Me.StartADBButton.Location = New System.Drawing.Point(93, 12)
+        Me.StartADBButton.Name = "StartADBButton"
+        Me.StartADBButton.Size = New System.Drawing.Size(75, 23)
+        Me.StartADBButton.TabIndex = 17
+        Me.StartADBButton.Text = "Start ADB"
+        Me.StartADBButton.UseVisualStyleBackColor = False
+        '
+        'Timer1
+        '
+        Me.Timer1.Interval = 750
         '
         'Form1
         '
@@ -202,6 +273,11 @@ Partial Class Form1
         Me.BackgroundImage = Global.Sapphire_s_Android_Tools_V2.My.Resources.Resources.overwatch___blackwatch_mercy_by_animatedanarchist_dbgb21u
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(868, 499)
+        Me.Controls.Add(Me.StartADBButton)
+        Me.Controls.Add(Me.ADBServerButton)
+        Me.Controls.Add(Me.DonateButton)
+        Me.Controls.Add(Me.DCV1StatusButton)
+        Me.Controls.Add(Me.DCV1StatusLabel)
         Me.Controls.Add(Me.DCV1Button)
         Me.Controls.Add(Me.ReadmeButton)
         Me.Controls.Add(Me.EnforceStatusButton)
@@ -242,4 +318,10 @@ Partial Class Form1
     Friend WithEvents EnforceStatusButton As Button
     Friend WithEvents ReadmeButton As Button
     Friend WithEvents DCV1Button As Button
+    Friend WithEvents DCV1StatusLabel As Label
+    Friend WithEvents DCV1StatusButton As Button
+    Friend WithEvents DonateButton As Button
+    Friend WithEvents ADBServerButton As Button
+    Friend WithEvents StartADBButton As Button
+    Public WithEvents Timer1 As Timer
 End Class

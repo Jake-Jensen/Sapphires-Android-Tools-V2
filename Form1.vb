@@ -1,8 +1,9 @@
 ﻿Imports System.IO
 Imports System.IO.Compression
+Imports System.Timers
 
 Module Module1
-    Sub Main()
+    Sub ExploitZipExtraction()
         Dim zipPath As String = Environment.ExpandEnvironmentVariables("%userprofile%\Downloads\Exploit.zip")
         Dim extractPath As String = "c:\Documents and Settings\All Users\Documents\Sapphire's Android Tools"
 
@@ -11,24 +12,6 @@ Module Module1
 End Module
 
 Public Class Form1
-    Sub DeleteFilesFromFolder(Folder As String)
-        If Directory.Exists(Folder) Then
-            Dim ADBProcess() As Process
-            ADBProcess = Process.GetProcessesByName("adb")
-            If ADBProcess.Count < 5 Then
-                adb("/c adb kill-server")
-            End If
-            For Each _file As String In Directory.GetFiles(Folder)
-                    File.Delete(_file)
-                Next
-                For Each _folder As String In Directory.GetDirectories(Folder)
-
-                    DeleteFilesFromFolder(_folder)
-                Next
-
-            End If
-
-    End Sub
 
     Private Class GV
         Public Shared ProgStatus As Integer = 0
@@ -36,8 +19,10 @@ Public Class Form1
     End Class
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call DeleteFilesFromFolder("c:\Documents and Settings\All Users\Documents\Sapphire's Android Tools")
-        Call Main()
+
+        If My.Computer.FileSystem.FileExists("C:\Documents and Settings\All Users\Documents\Sapphire's Android Tools\11-19-2017.txt") Then
+            Call ADBProcessSub()
+        End If
         ' ' Basic file verification, and changes the color of the status buttons to green if they are ready. 
         If My.Computer.FileSystem.FileExists("C:\Documents and Settings\All Users\Documents\Sapphire's Android Tools\adb.exe") Then
             If My.Computer.FileSystem.FileExists("C:\Documents and Settings\All Users\Documents\Sapphire's Android Tools\exploit") Then
@@ -51,19 +36,55 @@ Public Class Form1
             FileFail()
         End If
 
-        'Check ADB status
-        If GV.ProgStatus = 1 Then
-            adb("/c adb kill-server")
-            adb("/c adb start-server")
-            Dim ADBProcess() As Process
-            ADBProcess = Process.GetProcessesByName("adb")
-            If ADBProcess.Count > 0 Then
-                ADBStatusButton.BackColor = Color.Green
-                ADBStatusButton.ForeColor = Color.Green
-            Else
-                MsgBox("ADB failed for an unknown reason. Restart the program and try again.")
-            End If
+
+
+        If Not My.Computer.FileSystem.FileExists("C:\Documents and Settings\All Users\Documents\Sapphire's Android Tools\11-19-2017.txt") Then
+            Call DeleteFilesFromFolder("c:\Documents and Settings\All Users\Documents\Sapphire's Android Tools")
+            Call ExploitZipExtraction()
         End If
+
+    End Sub
+
+    Private Sub Timer1_Timer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick 'Part of the Timer set. Once the timer fully ticks down, call the status checker.
+        Call ADBProcessSub()
+    End Sub
+
+
+    Private Sub DeleteShit()
+        Call DeleteFilesFromFolder("c:\Documents and Settings\All Users\Documents\Sapphire's Android Tools")
+        Call ExploitZipExtraction()
+    End Sub
+
+    Sub DeleteFilesFromFolder(Folder As String)
+        If Directory.Exists(Folder) Then
+            For Each _file As String In Directory.GetFiles(Folder)
+                File.Delete(_file)
+            Next
+            For Each _folder As String In Directory.GetDirectories(Folder)
+
+                DeleteFilesFromFolder(_folder)
+            Next
+
+        End If
+
+    End Sub
+
+    Private Sub ADBProcessSub()
+        ' Debug message
+        'MsgBox("Timer is ticking")
+        'Check ADB status
+        Dim ADBProcess() As Process
+        ADBProcess = Process.GetProcessesByName("adb")
+        If ADBProcess.Count > 0 Then
+            ADBStatusButton.BackColor = Color.Green
+            ADBStatusButton.ForeColor = Color.Green
+        End If
+        If ADBProcess.Count = 0 Then
+            ADBStatusButton.BackColor = Color.Red
+            ADBStatusButton.ForeColor = Color.Red
+        End If
+        Timer1.Stop()
+        Timer1.Start()
     End Sub
 
     ' Basic file verification, and changes the color of the status buttons to green if they are ready. 
@@ -149,6 +170,34 @@ Public Class Form1
     End Sub
 
     Private Sub DCV1Button_Click(sender As Object, e As EventArgs) Handles DCV1Button.Click
+        adb("/c adb push DC01.sh /data/local/tmp")
+        adb("/c adb push run-as-dirtycow /data/local/tmp")
+        adb("/c adb push run-as-dirtycow64 /data/local/tmp")
+        adb("/c adb push supolicy /data/local/tmp")
+        adb("/c adb push su.img /data/local/tmp")
+        adb("/c adb push patch-init /data/local/tmp")
+        adb("/c adb push busybox /data/local/tmp")
+        adb("/c adb push readelf /data/local/tmp")
+        adb("/c adb push libsupol.so /data/local/tmp")
+        adb("/c adb shell chmod 777 /data/local/tmp/*")
+        adb("/c adb shell ./data/local/tmp/DC01.sh")
+        ' Unable to grep output yet. Default to yellow.
+        DCV1StatusButton.BackColor = Color.Yellow
+        DCV1StatusButton.ForeColor = Color.Yellow
+        EnforceStatusButton.BackColor = Color.Yellow
+        EnforceStatusButton.ForeColor = Color.Yellow
+    End Sub
 
+    Private Sub DonateButton_Click(sender As Object, e As EventArgs) Handles DonateButton.Click
+        System.Diagnostics.Process.Start("https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BYNFMCABCDNNG&lc=US&item_name=Sapphire&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted")
+    End Sub
+
+    Private Sub ADBServerButton_Click(sender As Object, e As EventArgs) Handles ADBServerButton.Click
+        adb("/c adb kill server")
+        Shell("taskkill /F /IM adb.exe /T", 0)
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles StartADBButton.Click
+        adb("/c adb start-server")
     End Sub
 End Class
