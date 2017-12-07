@@ -8,7 +8,7 @@ Exploit.zip (Available upon request)
 While the tool is made with the Z981 in mind, the current library of exploits should work for any phone with 64bit instruction sets, and not past a certain security patch date depending on the exploit being used. 
 
 # Current Exploits
-VIKIROOT
+Sapphires_Clean_Cow
 
 # Future exploits
 1. Blueborne
