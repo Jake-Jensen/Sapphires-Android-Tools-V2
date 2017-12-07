@@ -63,9 +63,39 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Ass() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Ass", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Neko() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Neko", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property overwatch___blackwatch_mercy_by_animatedanarchist_dbgb21u() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("overwatch___blackwatch_mercy_by_animatedanarchist_dbgb21u", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property OverwatchMercy() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("OverwatchMercy", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

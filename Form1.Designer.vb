@@ -28,21 +28,50 @@ Partial Class Form1
         Me.ReadyLabel = New System.Windows.Forms.Label()
         Me.ADBStatusLabel = New System.Windows.Forms.Label()
         Me.ADBStatusButton = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ExploitButton = New System.Windows.Forms.Button()
-        Me.DiscordButton = New System.Windows.Forms.Button()
-        Me.ContactButton = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.EnforceStatLabel = New System.Windows.Forms.Label()
         Me.EnforceStatusButton = New System.Windows.Forms.Button()
-        Me.ReadmeButton = New System.Windows.Forms.Button()
-        Me.DCV1Button = New System.Windows.Forms.Button()
         Me.DCV1StatusLabel = New System.Windows.Forms.Label()
         Me.DCV1StatusButton = New System.Windows.Forms.Button()
-        Me.DonateButton = New System.Windows.Forms.Button()
-        Me.ADBServerButton = New System.Windows.Forms.Button()
-        Me.StartADBButton = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.ProgressBox = New System.Windows.Forms.TextBox()
+        Me.StartADBBackground = New System.ComponentModel.BackgroundWorker()
+        Me.StopADBBackground = New System.ComponentModel.BackgroundWorker()
+        Me.LogcatBackground = New System.ComponentModel.BackgroundWorker()
+        Me.SEPolicyBackground = New System.ComponentModel.BackgroundWorker()
+        Me.ForceResetBackground = New System.ComponentModel.BackgroundWorker()
+        Me.RootShellBackground = New System.ComponentModel.BackgroundWorker()
+        Me.DCV1Background = New System.ComponentModel.BackgroundWorker()
+        Me.IAmGrootBackground = New System.ComponentModel.BackgroundWorker()
+        Me.ChiptunesBackground = New System.ComponentModel.BackgroundWorker()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExploitOnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PlaceholderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PlaceholderToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CleanCowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartADBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StartADBToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.KillADBToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SEPolicyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SetPermissiveToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForceResetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogcatToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DebugMenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SpamStatusBoxToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckDBStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckResolutionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MiscToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DonateToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContributorsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContactToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContactToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReadMeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BackgroundToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ReadyButton
@@ -93,66 +122,6 @@ Partial Class Form1
         Me.ADBStatusButton.TabIndex = 3
         Me.ADBStatusButton.UseVisualStyleBackColor = False
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Logcat"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'ExploitButton
-        '
-        Me.ExploitButton.BackColor = System.Drawing.Color.Transparent
-        Me.ExploitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ExploitButton.ForeColor = System.Drawing.Color.White
-        Me.ExploitButton.Location = New System.Drawing.Point(174, 12)
-        Me.ExploitButton.Name = "ExploitButton"
-        Me.ExploitButton.Size = New System.Drawing.Size(75, 23)
-        Me.ExploitButton.TabIndex = 5
-        Me.ExploitButton.Text = "Root Shell"
-        Me.ExploitButton.UseVisualStyleBackColor = False
-        '
-        'DiscordButton
-        '
-        Me.DiscordButton.BackColor = System.Drawing.Color.Transparent
-        Me.DiscordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DiscordButton.ForeColor = System.Drawing.Color.White
-        Me.DiscordButton.Location = New System.Drawing.Point(780, 464)
-        Me.DiscordButton.Name = "DiscordButton"
-        Me.DiscordButton.Size = New System.Drawing.Size(75, 23)
-        Me.DiscordButton.TabIndex = 6
-        Me.DiscordButton.Text = "Discord"
-        Me.DiscordButton.UseVisualStyleBackColor = False
-        '
-        'ContactButton
-        '
-        Me.ContactButton.BackColor = System.Drawing.Color.Transparent
-        Me.ContactButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ContactButton.ForeColor = System.Drawing.Color.White
-        Me.ContactButton.Location = New System.Drawing.Point(780, 435)
-        Me.ContactButton.Name = "ContactButton"
-        Me.ContactButton.Size = New System.Drawing.Size(75, 23)
-        Me.ContactButton.TabIndex = 7
-        Me.ContactButton.Text = "Contact"
-        Me.ContactButton.UseVisualStyleBackColor = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(12, 70)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "SEPolicy"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
         'EnforceStatLabel
         '
         Me.EnforceStatLabel.AutoSize = True
@@ -176,30 +145,6 @@ Partial Class Form1
         Me.EnforceStatusButton.Size = New System.Drawing.Size(19, 13)
         Me.EnforceStatusButton.TabIndex = 10
         Me.EnforceStatusButton.UseVisualStyleBackColor = False
-        '
-        'ReadmeButton
-        '
-        Me.ReadmeButton.BackColor = System.Drawing.Color.Transparent
-        Me.ReadmeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ReadmeButton.ForeColor = System.Drawing.Color.White
-        Me.ReadmeButton.Location = New System.Drawing.Point(781, 406)
-        Me.ReadmeButton.Name = "ReadmeButton"
-        Me.ReadmeButton.Size = New System.Drawing.Size(75, 23)
-        Me.ReadmeButton.TabIndex = 11
-        Me.ReadmeButton.Text = "Readme"
-        Me.ReadmeButton.UseVisualStyleBackColor = False
-        '
-        'DCV1Button
-        '
-        Me.DCV1Button.BackColor = System.Drawing.Color.Transparent
-        Me.DCV1Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DCV1Button.ForeColor = System.Drawing.Color.White
-        Me.DCV1Button.Location = New System.Drawing.Point(174, 41)
-        Me.DCV1Button.Name = "DCV1Button"
-        Me.DCV1Button.Size = New System.Drawing.Size(75, 23)
-        Me.DCV1Button.TabIndex = 12
-        Me.DCV1Button.Text = "DC V1"
-        Me.DCV1Button.UseVisualStyleBackColor = False
         '
         'DCV1StatusLabel
         '
@@ -225,81 +170,258 @@ Partial Class Form1
         Me.DCV1StatusButton.TabIndex = 14
         Me.DCV1StatusButton.UseVisualStyleBackColor = False
         '
-        'DonateButton
-        '
-        Me.DonateButton.BackColor = System.Drawing.Color.Transparent
-        Me.DonateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.DonateButton.ForeColor = System.Drawing.Color.White
-        Me.DonateButton.Location = New System.Drawing.Point(781, 377)
-        Me.DonateButton.Name = "DonateButton"
-        Me.DonateButton.Size = New System.Drawing.Size(75, 23)
-        Me.DonateButton.TabIndex = 15
-        Me.DonateButton.Text = "Donate"
-        Me.DonateButton.UseVisualStyleBackColor = False
-        '
-        'ADBServerButton
-        '
-        Me.ADBServerButton.BackColor = System.Drawing.Color.Transparent
-        Me.ADBServerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ADBServerButton.ForeColor = System.Drawing.Color.White
-        Me.ADBServerButton.Location = New System.Drawing.Point(93, 41)
-        Me.ADBServerButton.Name = "ADBServerButton"
-        Me.ADBServerButton.Size = New System.Drawing.Size(75, 23)
-        Me.ADBServerButton.TabIndex = 16
-        Me.ADBServerButton.Text = "Kill ADB"
-        Me.ADBServerButton.UseVisualStyleBackColor = False
-        '
-        'StartADBButton
-        '
-        Me.StartADBButton.BackColor = System.Drawing.Color.Transparent
-        Me.StartADBButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.StartADBButton.ForeColor = System.Drawing.Color.White
-        Me.StartADBButton.Location = New System.Drawing.Point(93, 12)
-        Me.StartADBButton.Name = "StartADBButton"
-        Me.StartADBButton.Size = New System.Drawing.Size(75, 23)
-        Me.StartADBButton.TabIndex = 17
-        Me.StartADBButton.Text = "Start ADB"
-        Me.StartADBButton.UseVisualStyleBackColor = False
-        '
         'Timer1
         '
         Me.Timer1.Interval = 750
         '
+        'ProgressBox
+        '
+        Me.ProgressBox.BackColor = System.Drawing.Color.Black
+        Me.ProgressBox.ForeColor = System.Drawing.Color.White
+        Me.ProgressBox.Location = New System.Drawing.Point(12, 12)
+        Me.ProgressBox.MaximumSize = New System.Drawing.Size(237, 475)
+        Me.ProgressBox.MinimumSize = New System.Drawing.Size(237, 475)
+        Me.ProgressBox.Multiline = True
+        Me.ProgressBox.Name = "ProgressBox"
+        Me.ProgressBox.ReadOnly = True
+        Me.ProgressBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.ProgressBox.Size = New System.Drawing.Size(237, 475)
+        Me.ProgressBox.TabIndex = 24
+        '
+        'StartADBBackground
+        '
+        '
+        'StopADBBackground
+        '
+        '
+        'LogcatBackground
+        '
+        '
+        'SEPolicyBackground
+        '
+        '
+        'ForceResetBackground
+        '
+        '
+        'IAmGrootBackground
+        '
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.AutoSize = False
+        Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
+        Me.MenuStrip1.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.ToolStripMenuItem4, Me.ToolsToolStripMenuItem, Me.MiscToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(252, 12)
+        Me.MenuStrip1.MaximumSize = New System.Drawing.Size(362, 24)
+        Me.MenuStrip1.MinimumSize = New System.Drawing.Size(362, 24)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(362, 24)
+        Me.MenuStrip1.TabIndex = 26
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExploitOnToolStripMenuItem})
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(69, 20)
+        Me.ToolStripMenuItem1.Text = "4.4 - 4.4.4"
+        '
+        'ExploitOnToolStripMenuItem
+        '
+        Me.ExploitOnToolStripMenuItem.Name = "ExploitOnToolStripMenuItem"
+        Me.ExploitOnToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.ExploitOnToolStripMenuItem.Text = "Placeholder"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PlaceholderToolStripMenuItem})
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(69, 20)
+        Me.ToolStripMenuItem2.Text = "5.0 - 5.0.1"
+        '
+        'PlaceholderToolStripMenuItem
+        '
+        Me.PlaceholderToolStripMenuItem.Name = "PlaceholderToolStripMenuItem"
+        Me.PlaceholderToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
+        Me.PlaceholderToolStripMenuItem.Text = "Placeholder"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PlaceholderToolStripMenuItem1})
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(34, 20)
+        Me.ToolStripMenuItem3.Text = "6.0"
+        '
+        'PlaceholderToolStripMenuItem1
+        '
+        Me.PlaceholderToolStripMenuItem1.Name = "PlaceholderToolStripMenuItem1"
+        Me.PlaceholderToolStripMenuItem1.Size = New System.Drawing.Size(136, 22)
+        Me.PlaceholderToolStripMenuItem1.Text = "Placeholder"
+        '
+        'ToolStripMenuItem4
+        '
+        Me.ToolStripMenuItem4.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CleanCowToolStripMenuItem})
+        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
+        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(43, 20)
+        Me.ToolStripMenuItem4.Text = "6.0.1"
+        '
+        'CleanCowToolStripMenuItem
+        '
+        Me.CleanCowToolStripMenuItem.Name = "CleanCowToolStripMenuItem"
+        Me.CleanCowToolStripMenuItem.Size = New System.Drawing.Size(188, 22)
+        Me.CleanCowToolStripMenuItem.Text = "Sapphire's Clean Cow"
+        '
+        'ToolsToolStripMenuItem
+        '
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartADBToolStripMenuItem, Me.SEPolicyToolStripMenuItem, Me.ForceResetToolStripMenuItem, Me.LogcatToolStripMenuItem, Me.DebugMenuToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.ToolsToolStripMenuItem.Text = "Tools"
+        '
+        'StartADBToolStripMenuItem
+        '
+        Me.StartADBToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartADBToolStripMenuItem1, Me.KillADBToolStripMenuItem})
+        Me.StartADBToolStripMenuItem.Name = "StartADBToolStripMenuItem"
+        Me.StartADBToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.StartADBToolStripMenuItem.Text = "ADB"
+        '
+        'StartADBToolStripMenuItem1
+        '
+        Me.StartADBToolStripMenuItem1.Name = "StartADBToolStripMenuItem1"
+        Me.StartADBToolStripMenuItem1.Size = New System.Drawing.Size(124, 22)
+        Me.StartADBToolStripMenuItem1.Text = "Start ADB"
+        '
+        'KillADBToolStripMenuItem
+        '
+        Me.KillADBToolStripMenuItem.Name = "KillADBToolStripMenuItem"
+        Me.KillADBToolStripMenuItem.Size = New System.Drawing.Size(124, 22)
+        Me.KillADBToolStripMenuItem.Text = "Kill ADB"
+        '
+        'SEPolicyToolStripMenuItem
+        '
+        Me.SEPolicyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SetPermissiveToolStripMenuItem})
+        Me.SEPolicyToolStripMenuItem.Name = "SEPolicyToolStripMenuItem"
+        Me.SEPolicyToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SEPolicyToolStripMenuItem.Text = "SEPolicy"
+        '
+        'SetPermissiveToolStripMenuItem
+        '
+        Me.SetPermissiveToolStripMenuItem.Name = "SetPermissiveToolStripMenuItem"
+        Me.SetPermissiveToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
+        Me.SetPermissiveToolStripMenuItem.Text = "Set permissive"
+        '
+        'ForceResetToolStripMenuItem
+        '
+        Me.ForceResetToolStripMenuItem.Name = "ForceResetToolStripMenuItem"
+        Me.ForceResetToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ForceResetToolStripMenuItem.Text = "Force Reset"
+        '
+        'LogcatToolStripMenuItem
+        '
+        Me.LogcatToolStripMenuItem.Name = "LogcatToolStripMenuItem"
+        Me.LogcatToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LogcatToolStripMenuItem.Text = "Logcat"
+        '
+        'DebugMenuToolStripMenuItem
+        '
+        Me.DebugMenuToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SpamStatusBoxToolStripMenuItem, Me.CheckDBStatusToolStripMenuItem, Me.CheckResolutionToolStripMenuItem})
+        Me.DebugMenuToolStripMenuItem.Name = "DebugMenuToolStripMenuItem"
+        Me.DebugMenuToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DebugMenuToolStripMenuItem.Text = "Debug Menu"
+        '
+        'SpamStatusBoxToolStripMenuItem
+        '
+        Me.SpamStatusBoxToolStripMenuItem.Name = "SpamStatusBoxToolStripMenuItem"
+        Me.SpamStatusBoxToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.SpamStatusBoxToolStripMenuItem.Text = "Spam status box"
+        '
+        'CheckDBStatusToolStripMenuItem
+        '
+        Me.CheckDBStatusToolStripMenuItem.Name = "CheckDBStatusToolStripMenuItem"
+        Me.CheckDBStatusToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.CheckDBStatusToolStripMenuItem.Text = "Check DB status"
+        '
+        'CheckResolutionToolStripMenuItem
+        '
+        Me.CheckResolutionToolStripMenuItem.Name = "CheckResolutionToolStripMenuItem"
+        Me.CheckResolutionToolStripMenuItem.Size = New System.Drawing.Size(163, 22)
+        Me.CheckResolutionToolStripMenuItem.Text = "Check resolution"
+        '
+        'MiscToolStripMenuItem
+        '
+        Me.MiscToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DonateToolStripMenuItem, Me.ContributorsToolStripMenuItem, Me.ContactToolStripMenuItem, Me.ContactToolStripMenuItem1, Me.ReadMeToolStripMenuItem, Me.BackgroundToolStripMenuItem})
+        Me.MiscToolStripMenuItem.Name = "MiscToolStripMenuItem"
+        Me.MiscToolStripMenuItem.Size = New System.Drawing.Size(94, 20)
+        Me.MiscToolStripMenuItem.Text = "Miscellaneous"
+        '
+        'DonateToolStripMenuItem
+        '
+        Me.DonateToolStripMenuItem.Name = "DonateToolStripMenuItem"
+        Me.DonateToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.DonateToolStripMenuItem.Text = "Donate!"
+        '
+        'ContributorsToolStripMenuItem
+        '
+        Me.ContributorsToolStripMenuItem.Name = "ContributorsToolStripMenuItem"
+        Me.ContributorsToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.ContributorsToolStripMenuItem.Text = "Contributors"
+        '
+        'ContactToolStripMenuItem
+        '
+        Me.ContactToolStripMenuItem.Name = "ContactToolStripMenuItem"
+        Me.ContactToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.ContactToolStripMenuItem.Text = "Discord"
+        '
+        'ContactToolStripMenuItem1
+        '
+        Me.ContactToolStripMenuItem1.Name = "ContactToolStripMenuItem1"
+        Me.ContactToolStripMenuItem1.Size = New System.Drawing.Size(141, 22)
+        Me.ContactToolStripMenuItem1.Text = "Contact"
+        '
+        'ReadMeToolStripMenuItem
+        '
+        Me.ReadMeToolStripMenuItem.Name = "ReadMeToolStripMenuItem"
+        Me.ReadMeToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.ReadMeToolStripMenuItem.Text = "Read me"
+        '
+        'BackgroundToolStripMenuItem
+        '
+        Me.BackgroundToolStripMenuItem.Name = "BackgroundToolStripMenuItem"
+        Me.BackgroundToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.BackgroundToolStripMenuItem.Text = "Background"
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.Black
         Me.BackgroundImage = Global.Sapphire_s_Android_Tools_V2.My.Resources.Resources.overwatch___blackwatch_mercy_by_animatedanarchist_dbgb21u
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(868, 499)
-        Me.Controls.Add(Me.StartADBButton)
-        Me.Controls.Add(Me.ADBServerButton)
-        Me.Controls.Add(Me.DonateButton)
+        Me.Controls.Add(Me.ProgressBox)
         Me.Controls.Add(Me.DCV1StatusButton)
         Me.Controls.Add(Me.DCV1StatusLabel)
-        Me.Controls.Add(Me.DCV1Button)
-        Me.Controls.Add(Me.ReadmeButton)
         Me.Controls.Add(Me.EnforceStatusButton)
         Me.Controls.Add(Me.EnforceStatLabel)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.ContactButton)
-        Me.Controls.Add(Me.DiscordButton)
-        Me.Controls.Add(Me.ExploitButton)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ADBStatusButton)
         Me.Controls.Add(Me.ADBStatusLabel)
         Me.Controls.Add(Me.ReadyLabel)
         Me.Controls.Add(Me.ReadyButton)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(884, 538)
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(884, 538)
         Me.Name = "Form1"
         Me.Opacity = 0.95R
-        Me.Text = "Sapphire's Android Tools V2"
+        Me.Text = "Sapphire's Android Tools V2 (Binary build 0.9.3) CleanCow Edition"
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -309,19 +431,47 @@ Partial Class Form1
     Friend WithEvents ReadyLabel As Label
     Friend WithEvents ADBStatusLabel As Label
     Friend WithEvents ADBStatusButton As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ExploitButton As Button
-    Friend WithEvents DiscordButton As Button
-    Friend WithEvents ContactButton As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents EnforceStatLabel As Label
     Friend WithEvents EnforceStatusButton As Button
-    Friend WithEvents ReadmeButton As Button
-    Friend WithEvents DCV1Button As Button
     Friend WithEvents DCV1StatusLabel As Label
     Friend WithEvents DCV1StatusButton As Button
-    Friend WithEvents DonateButton As Button
-    Friend WithEvents ADBServerButton As Button
-    Friend WithEvents StartADBButton As Button
     Public WithEvents Timer1 As Timer
+    Friend WithEvents ProgressBox As TextBox
+    Friend WithEvents StartADBBackground As System.ComponentModel.BackgroundWorker
+    Friend WithEvents StopADBBackground As System.ComponentModel.BackgroundWorker
+    Friend WithEvents LogcatBackground As System.ComponentModel.BackgroundWorker
+    Friend WithEvents SEPolicyBackground As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ForceResetBackground As System.ComponentModel.BackgroundWorker
+    Friend WithEvents RootShellBackground As System.ComponentModel.BackgroundWorker
+    Friend WithEvents DCV1Background As System.ComponentModel.BackgroundWorker
+    Friend WithEvents IAmGrootBackground As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ChiptunesBackground As System.ComponentModel.BackgroundWorker
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ExploitOnToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem4 As ToolStripMenuItem
+    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StartADBToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StartADBToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents KillADBToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MiscToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SEPolicyToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SetPermissiveToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CleanCowToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ForceResetToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PlaceholderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PlaceholderToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents DonateToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContributorsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContactToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ContactToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents ReadMeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BackgroundToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogcatToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DebugMenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SpamStatusBoxToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CheckDBStatusToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CheckResolutionToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -95,6 +95,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackgroundChanger1.Designer.vb">
+      <DependentUpon>BackgroundChanger1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BackgroundChanger1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BackgroundChanger1.resx">
+      <DependentUpon>BackgroundChanger1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +164,19 @@
     <None Include="Resources\overwatch___blackwatch_mercy_by_animatedanarchist-dbgb21u.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\2807.jpg" />
+    <None Include="Resources\48483543_p0.jpg" />
+    <None Include="Resources\4k917.jpg" />
+    <None Include="Music\L_on_Bli_-_No_Sun_Maf464_remake_.wav" />
+    <None Include="Music\maf_-_zarb.wav" />
+    <None Include="Music\Michael_Z_Land_-_Monkey_Island_-_Look_out_Maf464_r.wav" />
+    <None Include="Music\Random_Voice_-_Monday_Maf_remake_.wav" />
+    <None Include="Music\Maniacs_of_Noise_MoN_-_Happy_H_Christmas_1999Mp3Co.wav" />
+    <None Include="Music\The_Hampsterdance_SongMp3Converter_net.wav" />
+    <None Include="Music\Tiptoe_through_the_tulips-_Tiny_Tim.wav" />
+    <None Include="Resources\adb.exe" />
+    <None Include="Resources\AdbWinApi.dll" />
+    <None Include="Resources\AdbWinUsbApi.dll" />
     <Content Include="saphhys_icon_0xD_icon.ico" />
   </ItemGroup>
   <ItemGroup>

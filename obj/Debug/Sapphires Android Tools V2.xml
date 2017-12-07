@@ -22,7 +22,22 @@ Sapphires Android Tools V2
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Sapphire_s_Android_Tools_V2.My.Resources.Resources.Ass">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Sapphire_s_Android_Tools_V2.My.Resources.Resources.Neko">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Sapphire_s_Android_Tools_V2.My.Resources.Resources.overwatch___blackwatch_mercy_by_animatedanarchist_dbgb21u">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Sapphire_s_Android_Tools_V2.My.Resources.Resources.OverwatchMercy">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
